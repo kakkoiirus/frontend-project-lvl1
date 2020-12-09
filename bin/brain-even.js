@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import cli from '../src/cli.js';
-import evenGame from '../src/even-game.js';
+import startGame from '../src/index.js';
+import evenGame from '../src/games/even-game.js';
 
-const userName = cli();
-evenGame(userName);
+startGame(evenGame);
