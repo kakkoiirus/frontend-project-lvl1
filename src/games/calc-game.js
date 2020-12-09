@@ -1,4 +1,4 @@
-import readline from 'readline-sync';
+import { getRandomInt } from '../utils.js';
 
 const MAX_NUMBER = 20;
 const OPERATIONS = [
@@ -7,21 +7,16 @@ const OPERATIONS = [
   { sign: '*', calculate(a, b) { return a * b; } },
 ];
 
-const getRandomInt = (max = MAX_NUMBER) => Math.floor(Math.random() * Math.floor(max));
-
 export default {
   description: 'What is the result of the expression?',
   play() {
-    const firstNum = getRandomInt();
-    const secondNum = getRandomInt();
-    const operation = OPERATIONS[getRandomInt(OPERATIONS.length)];
+    const firstNum = getRandomInt(MAX_NUMBER);
+    const secondNum = getRandomInt(MAX_NUMBER);
+    const currentGameOperation = OPERATIONS[getRandomInt(OPERATIONS.length)];
 
-    const question = `${firstNum} ${operation.sign} ${secondNum}`;
-    const expectedAnswer = operation.calculate(firstNum, secondNum);
+    const question = `${firstNum} ${currentGameOperation.sign} ${secondNum}`;
+    const expectedAnswer = currentGameOperation.calculate(firstNum, secondNum);
 
-    console.log(`Question: ${question}`);
-    const userAnswer = readline.question('Your answer: ');
-
-    return { expectedAnswer, userAnswer: Number(userAnswer) };
+    return { expectedAnswer: String(expectedAnswer), question };
   },
 };
