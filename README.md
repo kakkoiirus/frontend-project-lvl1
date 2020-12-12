@@ -9,3 +9,4 @@ Asciinema:
 * [Запуск Brain-even](https://asciinema.org/a/8MBcSEdxwCwxbxaQEpgtQBQNq)
 * [Запуск Brain-calc](https://asciinema.org/a/L5VqUCV8R6RIITkx6qoi5pGB8)
 * [Запуск Brain-gcd](https://asciinema.org/a/V6pX7EkgIXPyVVDnN7cywmwsT)
+* [Запуск Brain-progression](https://asciinema.org/a/c7Z2LwxXDtUiWs2kw39b3ajRA)
