@@ -11,7 +11,7 @@ const isPrime = (num) => {
   return num > 1;
 };
 
-export default {
+export default () => ({
   description: 'Answer "yes" if given number is prime. Otherwise answer "no".',
   play() {
     const question = getRandomInRange(2, MAX_NUMBER);
@@ -19,4 +19,4 @@ export default {
 
     return { expectedAnswer, question };
   },
-};
+});

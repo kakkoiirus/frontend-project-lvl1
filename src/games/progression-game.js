@@ -21,7 +21,7 @@ const generateProgression = () => {
   return progression;
 };
 
-export default {
+export default () => ({
   description: 'What number is missing in the progression?',
   play() {
     const progression = generateProgression();
@@ -33,4 +33,4 @@ export default {
 
     return { expectedAnswer: String(expectedAnswer), question };
   },
-};
+});

@@ -8,7 +8,7 @@ const OPERATIONS = [
   { sign: '*', calculate(a, b) { return a * b; } },
 ];
 
-export default {
+export default () => ({
   description: 'What is the result of the expression?',
   play() {
     const firstNum = getRandomInRange(MIN_NUMBER, MAX_NUMBER);
@@ -20,4 +20,4 @@ export default {
 
     return { expectedAnswer: String(expectedAnswer), question };
   },
-};
+});

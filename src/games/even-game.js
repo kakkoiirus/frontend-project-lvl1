@@ -5,7 +5,7 @@ const MAX_NUMBER = 20;
 
 const isEven = (num) => num % 2 === 0;
 
-export default {
+export default () => ({
   description: 'Answer "yes" if the number is even, otherwise answer "no".',
   play() {
     const questionNumber = getRandomInRange(MIN_NUMBER, MAX_NUMBER);
@@ -15,4 +15,4 @@ export default {
 
     return { expectedAnswer, question };
   },
-};
+});

@@ -10,7 +10,7 @@ const getGreatestCommonDivisor = (first, second) => {
   return getGreatestCommonDivisor(second, first % second);
 };
 
-export default {
+export default () => ({
   description: 'Find the greatest common divisor of given numbers.',
   play() {
     const firstNum = getRandomInRange(1, MAX_NUMBER);
@@ -21,4 +21,4 @@ export default {
 
     return { expectedAnswer: String(expectedAnswer), question };
   },
-};
+});
