@@ -1,6 +1,14 @@
-import { getRandomInRange, getGreatestCommonDivisor } from '../utils.js';
+import { getRandomInRange } from '../utils.js';
 
 const MAX_NUMBER = 50;
+
+const getGreatestCommonDivisor = (first, second) => {
+  if (second === 0) {
+    return first;
+  }
+
+  return getGreatestCommonDivisor(second, first % second);
+};
 
 export default {
   description: 'Find the greatest common divisor of given numbers.',
