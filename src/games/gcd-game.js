@@ -1,4 +1,4 @@
-import { getRandomInRange } from '../utils.js';
+import getRandomInRange from '../get-random-in-range.js';
 
 const MAX_NUMBER = 50;
 
