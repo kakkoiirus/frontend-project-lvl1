@@ -13,10 +13,10 @@ export default () => ({
   play() {
     const firstNum = getRandomInRange(MIN_NUMBER, MAX_NUMBER);
     const secondNum = getRandomInRange(MIN_NUMBER, MAX_NUMBER);
-    const currentGameOperation = OPERATIONS[getRandomInRange(MIN_NUMBER, OPERATIONS.length - 1)];
+    const currentOperation = OPERATIONS[getRandomInRange(MIN_NUMBER, OPERATIONS.length - 1)];
 
-    const question = `${firstNum} ${currentGameOperation.sign} ${secondNum}`;
-    const expectedAnswer = currentGameOperation.calculate(firstNum, secondNum);
+    const question = `${firstNum} ${currentOperation.sign} ${secondNum}`;
+    const expectedAnswer = currentOperation.calculate(firstNum, secondNum);
 
     return { expectedAnswer: String(expectedAnswer), question };
   },

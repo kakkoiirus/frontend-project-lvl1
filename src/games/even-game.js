@@ -11,7 +11,7 @@ export default () => ({
     const questionNumber = getRandomInRange(MIN_NUMBER, MAX_NUMBER);
     const expectedAnswer = isEven(questionNumber) ? 'yes' : 'no';
 
-    const question = `${questionNumber}`;
+    const question = String(questionNumber);
 
     return { expectedAnswer, question };
   },

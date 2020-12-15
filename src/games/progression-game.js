@@ -29,7 +29,7 @@ export default () => ({
     const expectedAnswer = progression[hiddenPosition];
 
     progression[hiddenPosition] = HIDDEN_SYMBOL;
-    const question = `${progression.join(' ')}`;
+    const question = progression.join(' ');
 
     return { expectedAnswer: String(expectedAnswer), question };
   },
