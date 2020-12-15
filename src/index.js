@@ -2,8 +2,8 @@ import readline from 'readline-sync';
 
 const ATTEMPTS_COUNT = 3;
 
-const startGame = (game) => {
-  const currentGame = game();
+const startGame = (getGame) => {
+  const currentGame = getGame();
   console.log('Welcome to the Brain Games!');
 
   const userName = readline.question('May I have your name? ');
