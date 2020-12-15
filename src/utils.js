@@ -1,5 +1,3 @@
-const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
-
 const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const getGreatestCommonDivisor = (first, second) => {
@@ -11,7 +9,6 @@ const getGreatestCommonDivisor = (first, second) => {
 };
 
 export {
-  getRandomInt,
   getRandomInRange,
   getGreatestCommonDivisor,
 };

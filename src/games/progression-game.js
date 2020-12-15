@@ -1,13 +1,14 @@
-import { getRandomInt, getRandomInRange } from '../utils.js';
+import { getRandomInRange } from '../utils.js';
 
 const MIN_PROGRESSION_LENGTH = 5;
 const MAX_PROGRESSION_LENGTH = 10;
+const MIN_START_NUMBER = 0;
 const MAX_START_NUMBER = 10;
 const MAX_STEP_NUMBER = 10;
 const HIDDEN_SYMBOL = '..';
 
 const generateProgression = () => {
-  const start = getRandomInt(MAX_START_NUMBER);
+  const start = getRandomInRange(MIN_START_NUMBER, MAX_START_NUMBER);
   const step = getRandomInRange(1, MAX_STEP_NUMBER);
   const progressionLength = getRandomInRange(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
 
@@ -24,7 +25,7 @@ export default {
   description: 'What number is missing in the progression?',
   play() {
     const progression = generateProgression();
-    const hiddenPosition = getRandomInt(progression.length - 1);
+    const hiddenPosition = getRandomInRange(0, progression.length - 1);
     const expectedAnswer = progression[hiddenPosition];
 
     progression[hiddenPosition] = HIDDEN_SYMBOL;
