@@ -1,12 +1,16 @@
 import readline from 'readline-sync';
-import cli from './cli.js';
 
-const ATTEMPTS = 3;
+const ATTEMPTS_COUNT = 3;
 
 const startGame = (game) => {
-  const userName = cli();
+  console.log('Welcome to the Brain Games!');
+
+  const userName = readline.question('May I have your name? ');
+
+  console.log(`Hello, ${userName}!`);
+
   console.log(game.description);
-  for (let i = 0; i < ATTEMPTS; i += 1) {
+  for (let i = 0; i < ATTEMPTS_COUNT; i += 1) {
     const roundOfGame = game.play();
 
     console.log(`Question: ${roundOfGame.question}`);
